@@ -1,0 +1,44 @@
+{
+  "name": "tw-broken-border",
+  "version": "0.0.1",
+  "description": "A broken border plugin for TailwindCSS",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasparasIO/tw-broken-border.git"
+  },
+  "keywords": [
+    "tailwind",
+    "plugin",
+    "border",
+    "broken-border"
+  ],
+  "author": "Kasparas <kasparas32133@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kasparasIO/tw-broken-border/issues"
+  },
+  "homepage": "https://github.com/kasparasIO/tw-broken-border#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
