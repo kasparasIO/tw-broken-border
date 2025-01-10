@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "A broken border plugin for TailwindCSS",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "README.md",
@@ -15,11 +16,13 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "node --loader ts-node/esm --no-warnings build.mts && tsc --emitDeclarationOnly",
     "prepare": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -42,6 +45,7 @@
   "homepage": "https://github.com/kasparasIO/tw-broken-border#readme",
   "devDependencies": {
     "@types/jest": "^29.5.14",
+    "esbuild": "^0.24.2",
     "jest": "^29.7.0",
     "tailwindcss": "^3.4.17",
     "ts-jest": "^29.2.5",
