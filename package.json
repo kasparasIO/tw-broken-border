@@ -1,6 +1,6 @@
 {
   "name": "tw-broken-border",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A broken border plugin for TailwindCSS",
   "type": "module",
   "main": "./dist/index.js",
